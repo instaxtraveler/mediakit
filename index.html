@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instaxtraveler Media Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<style>
+/* VOICE a creator media kit page: friendly, scannable, photo-led
+   IDEA a profile card pinned over a polar dusk photo, with data and work on clean white cards beside it
+   PICTURE the lilac Arctic dusk as the fixed backdrop; her face in the profile, her wildlife photos in the cards
+   COLOUR dusk lilac #867fa0, periwinkle #7481a6, violet #6f6a9a, deep indigo #2f3956, white cards
+   TYPE Montserrat throughout; key words in italic with a lilac-to-blue gradient
+   LAYOUT laptop: sticky profile card left, scrolling cards right; phone: profile card first, then cards */
+:root{color-scheme:light;--ink:#23283d;--deep:#2f3956;--violet:#6f6a9a;--peri:#7481a6;--lilac:#867fa0;--pale:#eeedf6;--line:#e3e2ef;--grey:#5d6178;--grad:linear-gradient(90deg,#8a6fb8,#6a86c4)}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:16px/1.6 Montserrat,system-ui,sans-serif;background:#2f3956;overflow-x:clip}
+img{max-width:100%;display:block}
+p,h1,h2,h3,blockquote{margin:0}
+a{color:inherit}
+.bg{position:fixed;inset:0;z-index:-1}
+.bg img{width:100%;height:100%;object-fit:cover}
+.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(47,57,86,.05),rgba(47,57,86,.35))}
+
+.nav{position:sticky;top:12px;z-index:20;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.96);border-radius:999px;padding:6px 6px 6px 10px;box-shadow:0 8px 28px rgba(30,30,70,.22)}
+.nav .navl{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1}
+.nav .navl::-webkit-scrollbar{display:none}
+.nav .navl a{flex:none;text-decoration:none;font-size:13.5px;font-weight:600;color:var(--grey);padding:9px 12px;border-radius:999px;white-space:nowrap}
+.nav .navl a:hover,.nav .navl a.on{background:var(--pale);color:var(--deep)}
+.nav .lang{box-shadow:none;background:var(--pale)}
+.stack>section{scroll-margin-top:84px}
+.lang{display:flex;flex:none;background:rgba(255,255,255,.95);border-radius:999px;padding:4px;box-shadow:0 6px 20px rgba(30,30,70,.2)}
+.lang button{border:0;background:none;font:700 13px Montserrat,sans-serif;letter-spacing:.08em;padding:9px 14px;border-radius:999px;color:var(--grey);cursor:pointer;min-width:44px}
+.lang button[aria-pressed=true]{background:var(--deep);color:#fff}
+
+.layout{max-width:1280px;margin:0 auto;padding:28px max(3vw,14px) 48px;display:grid;grid-template-columns:350px minmax(0,1fr);gap:24px;align-items:start}
+.card{background:rgba(255,255,255,.96);border-radius:22px;padding:clamp(22px,3vw,36px);box-shadow:0 10px 40px rgba(30,30,70,.18)}
+.stack{display:flex;flex-direction:column;gap:24px}
+
+/* profile */
+.profile{position:sticky;top:24px;text-align:center;padding-top:28px}
+.avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;margin:0 auto;border:5px solid #fff;box-shadow:0 0 0 2px var(--lilac)}
+.handle{margin-top:16px;font-size:24px;font-weight:800}
+.word{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--peri);margin-top:4px;line-height:1.6}
+.loc{margin-top:12px;font-size:15px;color:var(--grey)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:10px;padding:8px 13px;font-size:14px;font-weight:700;text-decoration:none}
+.chip svg{width:17px;height:17px}
+.tag{background:var(--pale);border-radius:999px;padding:6px 13px;font-size:13px;font-weight:500;color:var(--deep)}
+.bio{margin-top:18px;font-size:15.5px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:22px;background:var(--deep);color:#fff;border-radius:999px;padding:15px 20px;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+.btn:hover{background:var(--violet)}
+
+/* hero */
+.hello .top{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:stretch}
+.hello h1{font-size:clamp(32px,4vw,54px);font-weight:800;line-height:1.05;letter-spacing:-.02em;text-wrap:balance}
+em.g{font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+.hello .intro{margin-top:16px;font-size:16.5px;color:var(--grey)}
+.shot{position:relative;border-radius:18px;overflow:hidden;min-height:340px}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 60%}
+.mission{margin-top:22px;padding:20px 22px;border-radius:16px;background:linear-gradient(135deg,rgba(138,111,184,.12),rgba(106,134,196,.14))}
+.mission .q{margin-top:6px;font-size:clamp(16px,1.4vw,18px);font-weight:600;font-style:italic;line-height:1.55;color:var(--deep)}
+.lbl{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--peri);margin-bottom:10px}
+h2{font-size:clamp(24px,2.6vw,32px);font-weight:800;letter-spacing:-.01em;line-height:1.15}
+.serv{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:24px}
+.sv{border:1px solid var(--line);border-radius:16px;padding:18px}
+.ico{width:44px;height:44px;border-radius:12px;background:var(--pale);display:grid;place-items:center;margin-bottom:10px}
+.ico svg{width:23px;height:23px;fill:none;stroke:var(--violet);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sv h3{font-size:15.5px;font-weight:700;line-height:1.3}
+.sv p{font-size:14px;color:var(--grey);margin-top:4px}
+
+/* metrics */
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 20px}
+.upd{font-size:13px;color:var(--grey)}
+.mgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+.m{border:1px solid var(--line);border-radius:16px;padding:18px}
+.m .t{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--grey)}
+.m .t svg{width:19px;height:19px;fill:none;stroke:var(--deep);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.m b{display:block;font-size:clamp(30px,3vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-top:6px}
+.up{font-size:13px;font-weight:600;color:#2f8a5b}
+.aud{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
+.aud h3{font-size:15px;font-weight:700;margin-bottom:14px}
+.donut{display:grid;place-items:center}
+.donut svg{width:150px;height:150px}
+.lg{margin-top:12px;font-size:14px;display:flex;flex-direction:column;gap:4px}
+.lg>span{display:flex;justify-content:space-between;gap:10px}
+.lg i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px}
+.row{position:relative;margin-bottom:8px;border-radius:8px;background:var(--pale);overflow:hidden;font-size:14px}
+.row::before{content:"";position:absolute;inset:0 auto 0 0;width:var(--v);background:#c9c6e0}
+.row>span{position:relative;display:flex;justify-content:space-between;padding:6px 10px;font-weight:500}
+
+/* portfolio */
+.sub{display:flex;align-items:center;gap:14px;margin:28px 0 14px;font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--deep)}
+.sub::after{content:"";flex:1;height:1px;background:var(--line)}
+.gal{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.gal figure{margin:0;border-radius:14px;overflow:hidden;position:relative;height:250px;cursor:zoom-in;transition:transform .35s ease,box-shadow .35s ease;z-index:0}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal figcaption{position:absolute;left:10px;bottom:10px;background:rgba(255,255,255,.92);border-radius:999px;padding:4px 11px;font-size:12.5px;font-weight:600;transition:opacity .2s}
+.w2{grid-column:span 2}.w3{grid-column:span 3}.w4{grid-column:span 4}.tall{height:380px}
+@media(hover:hover) and (min-width:700px){.gal figure:hover{transform:scale(1.45);z-index:5;box-shadow:0 18px 50px rgba(20,20,60,.45)}.gal figure.w4:hover,.gal figure.w3:hover{transform:scale(1.2)}.gal figure:hover figcaption{opacity:0}}
+
+/* reels */
+.reels{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:22px}
+.reel{aspect-ratio:9/16;border-radius:16px;overflow:hidden;position:relative;background:linear-gradient(160deg,#8a6fb8,#6a86c4 60%,#2f3956);color:#fff;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;padding:14px}
+.reel>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.reel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,22,40,.25),transparent 30%,transparent 55%,rgba(20,22,40,.8));z-index:0}
+.reel>span{position:relative;z-index:1}
+.reel .play{align-self:center;margin-top:auto;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.25);display:grid;place-items:center}
+.reel .play svg{width:22px;height:22px;fill:#fff;margin-left:3px}
+.reel .n{margin-top:auto;font-size:13.5px;font-weight:700;line-height:1.35}
+.reel .v{align-self:flex-start;background:rgba(255,255,255,.22);border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700}
+.reel:hover{filter:brightness(1.08)}
+
+/* packages */
+.packs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
+.pk{border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.pk.hi{border:2px solid var(--violet);background:linear-gradient(180deg,rgba(138,111,184,.07),transparent)}
+.pk h3{font-size:18px;font-weight:800}
+.pk .for{font-size:13.5px;color:var(--grey)}
+.pk ul{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px;font-size:14.5px}
+.pk li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:8px}
+.pk li::before{content:"";width:8px;height:8px;margin-top:7px;border-radius:50%;background:var(--grad)}
+.note{margin-top:16px;font-size:14px;color:var(--grey)}
+
+/* collabs */
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
+.case{border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.case .pic{height:150px;object-fit:cover;width:100%}
+.case .tile{height:150px;background:linear-gradient(135deg,#8a6fb8,#6a86c4);display:grid;place-items:center;color:#fff;font-weight:800;letter-spacing:.2em;font-size:13px;text-transform:uppercase}
+.case>div:last-child{padding:16px 18px 18px}
+.case h3{font-size:17px;font-weight:700}
+.case .pl{font-size:13px;color:var(--peri);font-weight:600;margin-top:2px}
+.case p{font-size:14px;color:var(--grey);margin-top:8px}
+.brands{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.brands span{border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:14px;font-weight:600;color:var(--deep);white-space:nowrap}
+
+
+/* collabs option B */
+.hero-stat{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 28px}
+.big{font-size:clamp(44px,6vw,72px);font-weight:800;letter-spacing:-.03em;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.big+p{color:var(--grey);font-size:15px;max-width:320px}
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.rc{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:9/13;color:#fff;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;padding:14px}
+.rc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.rc:hover img{transform:scale(1.04)}
+.rc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(20,22,40,.85))}
+.rc>*{position:relative;z-index:1}
+.rc h3{font-size:16px;font-weight:800;line-height:1.2}
+.rc p{font-size:12.5px;opacity:.92;margin-top:2px}
+.rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.crow{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:8px 14px 8px 8px;text-decoration:none}
+.crow:hover{border-color:var(--peri)}
+.crow img{width:64px;height:64px;border-radius:10px;object-fit:cover}
+.crow h3{font-size:15.5px;font-weight:800;line-height:1.25}
+.crow p{font-size:13px;color:var(--grey)}
+.crow .go{font-size:13px;font-weight:700;color:var(--violet);white-space:nowrap}
+.cats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.cat{border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.cat h3{font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--deep);margin-bottom:12px}
+.cat ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.cat li{background:var(--pale);border-radius:999px;padding:6px 13px;font-size:14px;font-weight:600;color:var(--deep)}
+@media(max-width:900px){.strip{grid-template-columns:repeat(2,minmax(0,1fr))}.rows,.cats{grid-template-columns:minmax(0,1fr)}}
+
+
+/* proposal */
+.prop{background:linear-gradient(160deg,rgba(255,255,255,.97),rgba(238,237,246,.97))}
+.prop .intro2{margin-top:14px;font-size:16.5px;color:var(--grey);max-width:760px}
+.deliv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px}
+.dv{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.dv.wide{grid-column:1/-1}
+.dv .hd{display:flex;align-items:center;gap:12px}
+.dv .ico{margin:0}
+.dv h3{font-size:18px;font-weight:800}
+.dv>p{font-size:14.5px;color:var(--grey)}
+.ideas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px}
+.idea{background:var(--pale);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.idea .n{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--violet)}
+.idea h4{margin:0;font-size:16px;font-weight:800;line-height:1.3;color:var(--deep)}
+.idea p{font-size:14px;color:var(--grey)}
+.extras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}
+.ex{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14.5px}
+.ex .ico{margin:0;width:38px;height:38px;flex:none}
+.ex .ico svg{width:20px;height:20px}
+.ex b{display:block;font-size:15px;color:var(--ink)}
+.ex span{color:var(--grey)}
+@media(max-width:900px){.extras{grid-template-columns:minmax(0,1fr)}}
+.terms{margin-top:18px;font-size:14px;color:var(--grey)}
+@media(max-width:900px){.deliv,.ideas{grid-template-columns:minmax(0,1fr)}}
+
+/* contact */
+.contact{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px}
+.contact p.s{margin-top:8px;color:var(--grey);font-size:15px}
+.links{display:flex;flex-direction:column;gap:10px}
+.links a{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:600;text-decoration:none;border:1px solid var(--line);border-radius:12px;padding:10px 16px;min-height:44px}
+.links a:hover{border-color:var(--peri)}
+.links svg{width:20px;height:20px;fill:none;stroke:var(--deep);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+.lb{position:fixed;inset:0;z-index:50;background:rgba(20,22,40,.88);display:none;place-items:center;padding:24px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:min(1200px,100%);max-height:88vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb button{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--deep);font-size:22px;cursor:pointer}
+
+@media(max-width:1100px){.serv,.mgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.reels{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1000px){.layout{grid-template-columns:minmax(0,1fr)}.profile{position:static}.aud{grid-template-columns:repeat(2,minmax(0,1fr))}.cases,.packs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.hello .top{grid-template-columns:minmax(0,1fr)}.shot{min-height:380px}.serv,.mgrid,.aud,.cases,.packs{grid-template-columns:minmax(0,1fr)}.reels{grid-template-columns:repeat(2,minmax(0,1fr))}.gal{grid-template-columns:repeat(2,minmax(0,1fr))}.w2,.w3,.w4{grid-column:span 2}.gal figure{height:260px}.gal figure.w2{grid-column:span 1;height:220px}.tall{height:300px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.gal figure{transition:none}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><img src="img/cover.jpg" alt=""></div>
+
+<main class="layout">
+
+<aside class="card profile">
+<img class="avatar" src="img/avatar.jpg" alt="Tefi, fotógrafa de naturaleza">
+<p class="handle">instaxtraveler</p>
+<p class="word" data-en="Nature photographer<br>&amp; content creator">Fotógrafa de naturaleza<br>&amp; content creator</p>
+<p class="loc">Argentina</p>
+<div class="chips">
+<a class="chip" href="https://www.instagram.com/instaxtraveler/"><svg viewBox="0 0 24 24" fill="none" stroke="#c13584" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="#c13584"/></svg>80,6K</a>
+</div>
+<div class="chips">
+<span class="tag" data-en="Wildlife">Fauna</span><span class="tag" data-en="Nature">Naturaleza</span><span class="tag" data-en="Travel">Viajes</span><span class="tag" data-en="Adventure">Aventura</span>
+</div>
+<p class="bio" data-en="Hi! I&#39;m Tefi, a nature photographer and adventurer. I travel and share my adventures through photos and video.">¡Hola! Soy Tefi, fotógrafa de naturaleza y aventurera. Viajo y comparto mis aventuras con fotos y videos.</p>
+<a class="btn" href="#contacto" data-en="Contact me ↗">Contactame ↗</a>
+</aside>
+
+<div class="stack">
+<nav class="nav" aria-label="Secciones"><div class="navl">
+<a href="#inicio" data-en="About">Sobre mí</a><a href="#metricas" data-en="Metrics">Métricas</a><a href="#fotos">Portfolio</a><a href="#reels">Reels</a><a href="#marcas" data-en="Brands">Marcas</a><a href="#antarpply" data-en="Proposal">Propuesta</a><a href="#contacto" data-en="Contact">Contacto</a>
+</div><div class="lang" role="group" aria-label="Idioma / Language"><button type="button" id="b-es" aria-pressed="true">ES</button><button type="button" id="b-en" aria-pressed="false">EN</button></div>
+</nav>
+
+<section class="card hello" id="inicio">
+<div class="top">
+<div>
+<p class="lbl" data-en="Nature photographer · Argentina">Fotógrafa de naturaleza · Argentina</p>
+<h1 data-en="Hi, I&#39;m <em class=&quot;g&quot;>Tefi</em>. I show you nature at its most <em class=&quot;g&quot;>wild</em>.">Hola, soy <em class="g">Tefi</em>. Te muestro la naturaleza más <em class="g">salvaje</em>.</h1>
+<blockquote class="mission"><p class="lbl" style="margin:0" data-en="My mission">Mi misión</p><p class="q" data-en="To reconnect people with nature. We live glued to a screen and further from the real world every day; I use that same screen to make people want to look at a glacier, listen to the sea or wait for a whale to surface.">Volver a conectar a las personas con la naturaleza. Vivimos pegados a una pantalla y cada vez más lejos del mundo real; yo uso esa misma pantalla para devolverles las ganas de mirar un glaciar, escuchar el mar o esperar a que asome una ballena.</p></blockquote>
+<p class="intro" data-en="I love working with brands and showing the best each one has to offer, adapting my content to their story.">Me encanta trabajar con marcas y mostrar lo mejor que cada una tiene para ofrecer, adaptando mi contenido a su historia.</p>
+</div>
+<div class="shot"><img src="img/camera.jpg" alt="Tefi fotografiando lobos marinos desde un bote con un teleobjetivo"></div>
+</div>
+<div class="serv">
+<div class="sv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="4"/><path d="M8 6l1.5-2h5L16 6"/></svg></div><h3 data-en="Professional photography">Fotografía profesional</h3><p data-en="Wildlife, landscape and experiences, licensed for your channels.">Fauna, paisaje y experiencias, con licencia para tus canales.</p></div>
+<div class="sv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="4"/><path d="M3 9h18M8 4l2 5M14 4l2 5"/><path d="M10 12.5v5l4.5-2.5z"/></svg></div><h3 data-en="Collab reels">Reels colaborativos</h3><p data-en="With storytelling, made to be watched to the end.">Con storytelling, pensados para verse hasta el final.</p></div>
+<div class="sv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="13" height="10" rx="3"/><path d="M6 14v4l4-4"/><path d="M11 16h7a3 3 0 0 0 3-3V9"/></svg></div><h3 data-en="Stories">Stories</h3><p data-en="The experience in first person, for my community.">La experiencia en primera persona para mi comunidad.</p></div>
+<div class="sv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="9" y="10" width="6" height="4" rx="1"/><path d="M9 11L5 7M15 11l4-4M9 13l-4 4M15 13l4 4"/><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/></svg></div><h3 data-en="Drone">Drone</h3><p data-en="Aerial shots where regulations allow.">Tomas aéreas donde la normativa lo permita.</p></div>
+</div>
+</section>
+
+<section class="card" id="metricas">
+<div class="head"><h2 data-en="Metrics">Métricas</h2><p class="upd" data-en="Instagram · last 30 days to Nov 22, 2026">Instagram · últimos 30 días al 22 nov 2026</p></div>
+<div class="mgrid">
+<div class="m"><p class="t"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21 20c0-2.6-1.7-4.9-4-5.7"/></svg><span data-en="Followers">Seguidores</span></p><b>80,6K</b><span class="up" data-en="↑ 2.7% · +1,988 in 30 days">↑ 2,7% · +1.988 en 30 días</span></div>
+<div class="m"><p class="t"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span data-en="Views">Visualizaciones</span></p><b>400K</b><span class="up" data-en="↑ 154.7% vs. previous month">↑ 154,7% vs. mes anterior</span></div>
+<div class="m"><p class="t"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-en="Aged 35 to 54">Entre 35 y 54 años</span></p><b>54%</b></div>
+<div class="m"><p class="t"><svg viewBox="0 0 24 24"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg><span data-en="Spanish-speaking">Habla hispana</span></p><b>96%</b></div>
+</div>
+<div class="aud">
+<div class="m"><h3 data-en="Gender">Género</h3>
+<div class="donut"><svg viewBox="0 0 42 42" role="img" aria-label="Mujeres 57%, hombres 43%"><circle cx="21" cy="21" r="15.9" fill="none" stroke="#c9c6e0" stroke-width="6"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#2f3956" stroke-width="6" stroke-dasharray="57 43" stroke-dashoffset="25"/></svg></div>
+<div class="lg"><span><span><i style="background:#2f3956"></i><span data-en="Women">Mujeres</span></span>57%</span><span><span><i style="background:#c9c6e0"></i><span data-en="Men">Hombres</span></span>43%</span></div>
+</div>
+<div class="m"><h3 data-en="Age">Edad</h3>
+<div class="row" style="--v:38.1%"><span><span>35–44</span>38,1%</span></div>
+<div class="row" style="--v:35.4%"><span><span>25–34</span>35,4%</span></div>
+<div class="row" style="--v:16%"><span><span>45–54</span>16,0%</span></div>
+<div class="row" style="--v:5.6%"><span><span>55–64</span>5,6%</span></div>
+<div class="row" style="--v:2.5%"><span><span>18–24</span>2,5%</span></div>
+<div class="row" style="--v:2.3%"><span><span>65+</span>2,3%</span></div>
+</div>
+<div class="m"><h3 data-en="Countries">Países</h3>
+<div class="row" style="--v:74.6%"><span><span>Argentina</span>74,6%</span></div>
+<div class="row" style="--v:13.9%"><span><span>Chile</span>13,9%</span></div>
+<div class="row" style="--v:2.2%"><span><span data-en="Spain">España</span>2,2%</span></div>
+<div class="row" style="--v:1.8%"><span><span data-en="United States">Estados Unidos</span>1,8%</span></div>
+<div class="row" style="--v:1.6%"><span><span>Uruguay</span>1,6%</span></div>
+</div>
+</div>
+</section>
+
+<section class="card" id="fotos">
+<h2>Portfolio</h2>
+<p class="sub" data-en="Wildlife">Animales</p>
+<div class="gal">
+<figure class="w2 tall"><img src="img/jaguar.jpg" alt="Yaguareté descansando en el pasto" loading="lazy"><figcaption data-en="Jaguar">Yaguareté</figcaption></figure>
+<figure class="w2 tall"><img src="img/peng1.jpg" alt="Retrato de pingüino papúa" loading="lazy"><figcaption data-en="Gentoo penguin">Pingüino papúa</figcaption></figure>
+<figure class="w2 tall"><img src="img/anteater.jpg" alt="Cría de oso hormiguero sobre el lomo de su madre" loading="lazy"><figcaption data-en="Giant anteater and pup">Oso hormiguero y su cría</figcaption></figure>
+<figure class="w2 tall"><img src="img/heron.jpg" alt="Garza levantando vuelo sobre el humedal" loading="lazy"><figcaption data-en="Cocoi heron">Garza mora</figcaption></figure>
+<figure class="w2 tall"><img src="img/magel2.jpg" alt="Primer plano de pingüino de Magallanes entre pastos" loading="lazy"><figcaption data-en="Magellanic penguin">Pingüino de Magallanes</figcaption></figure>
+<figure class="w2 tall"><img src="img/pelican.jpg" alt="Pelícanos sobre una roca" loading="lazy"><figcaption data-en="Pelicans">Pelícanos</figcaption></figure>
+<figure class="w4 tall"><img src="img/franca.jpg" alt="Cola de ballena franca austral saliendo del mar" loading="lazy" style="object-position:50% 62%"><figcaption data-en="Southern right whale">Ballena franca austral</figcaption></figure>
+<figure class="w2 tall"><img src="img/reno2.jpg" alt="Primer plano de un reno" loading="lazy"><figcaption data-en="Reindeer · Tromsø">Reno · Tromsø</figcaption></figure>
+<figure class="w3"><img src="img/peng3.jpg" alt="Pingüino papúa parado en una playa de piedras con montañas azules detrás" loading="lazy" style="object-position:50% 70%"><figcaption data-en="Gentoo penguin">Pingüino papúa</figcaption></figure>
+<figure class="w3"><img src="img/lobos.jpg" alt="Lobos marinos sobre la roca" loading="lazy"><figcaption data-en="Sea lions">Lobos marinos</figcaption></figure>
+</div>
+<p class="sub" data-en="Landscapes">Paisajes</p>
+<div class="gal">
+<figure class="w4 tall"><img src="img/faro.jpg" alt="Faro Les Eclaireurs al atardecer con montañas nevadas" loading="lazy"><figcaption data-en="Les Eclaireurs Lighthouse · Ushuaia">Faro Les Eclaireurs · Ushuaia</figcaption></figure>
+<figure class="w2 tall"><img src="img/fitz.jpg" alt="Cerro Fitz Roy entre nubes sobre un glaciar" loading="lazy"><figcaption data-en="Fitz Roy · El Chaltén">Fitz Roy · El Chaltén</figcaption></figure>
+<figure class="w2 tall"><img src="img/dolomites.jpg" alt="Iglesia en un valle verde frente a las Dolomitas" loading="lazy"><figcaption data-en="Dolomites · Italy">Dolomitas · Italia</figcaption></figure>
+<figure class="w2 tall"><img src="img/matterhorn.jpg" alt="Matterhorn nevado sobre un bosque de alerces dorados" loading="lazy"><figcaption data-en="Matterhorn · Switzerland">Matterhorn · Suiza</figcaption></figure>
+<figure class="w2 tall"><img src="img/moon.jpg" alt="Luna sobre montañas nevadas" loading="lazy"><figcaption data-en="Norway">Noruega</figcaption></figure>
+<figure class="w4"><img src="img/moreno2.jpg" alt="Frente del glaciar Perito Moreno con montañas nevadas" loading="lazy"><figcaption data-en="Perito Moreno Glacier">Glaciar Perito Moreno</figcaption></figure>
+<figure class="w2"><img src="img/moreno1.jpg" alt="Glaciar Perito Moreno y lago con témpanos" loading="lazy"><figcaption data-en="Perito Moreno Glacier">Glaciar Perito Moreno</figcaption></figure>
+<figure class="w3"><img src="img/ice.jpg" alt="Isla nevada en la hora azul" loading="lazy"><figcaption data-en="Blue hour · Norway">Hora azul · Noruega</figcaption></figure>
+<figure class="w3"><img src="img/birds.jpg" alt="Aves al atardecer sobre una montaña" loading="lazy"><figcaption data-en="Arctic sunset">Atardecer ártico</figcaption></figure>
+</div>
+</section>
+
+<section class="card" id="reels">
+<div class="head"><h2>Reels</h2><a class="upd" href="https://www.instagram.com/instaxtraveler/reels/" data-en="See all on Instagram ↗">Ver todos en Instagram ↗</a></div>
+<div class="reels">
+<a class="reel" href="https://www.instagram.com/instaxtraveler/reel/C5revE2xv1C/"><img src="img/fitz.jpg" alt="" loading="lazy" style="object-position:50% 50%"><span class="v">▶ 6,6M</span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><span class="n" data-en="El Chaltén · Dream trail">El Chaltén · Sendero de ensueño</span></a>
+<a class="reel" href="https://www.instagram.com/instaxtraveler/reel/CszQ3gPIKRB/"><img src="img/faro.jpg" alt="" loading="lazy" style="object-position:50% 40%"><span class="v">▶ 1,3M</span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><span class="n" data-en="Lighthouse at the End of the World · Ushuaia">Faro del Fin del Mundo · Ushuaia</span></a>
+<a class="reel" href="https://www.instagram.com/instaxtraveler/reel/DAowdJGSZcL/"><img src="img/franca.jpg" alt="" loading="lazy" style="object-position:50% 60%"><span class="v">▶ 214K</span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><span class="n" data-en="Southern right whale encounter">Encuentro con ballenas franca austral</span></a>
+<a class="reel" href="https://www.instagram.com/instaxtraveler/reel/DPXLpZ5Ebcn/"><img src="img/jaguar.jpg" alt="" loading="lazy" style="object-position:50% 50%"><span class="v">▶ 203K</span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><span class="n" data-en="Jaguar in the Pantanal">Yaguareté en el Pantanal</span></a>
+<a class="reel" href="https://www.instagram.com/instaxtraveler/reel/DE29lD4SoiI/"><img src="img/hero.jpg" alt="" loading="lazy" style="object-position:50% 40%"><span class="v">▶ 37,5K</span><span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span><span class="n" data-en="Tromsø, gateway to the Arctic">Tromsø, la puerta del Ártico</span></a>
+</div>
+</section>
+
+
+<section class="card" id="marcas">
+<div class="hero-stat">
+<div><p class="lbl" data-en="Collaborations">Colaboraciones</p><h2 data-en="Brands I&#39;ve <em class=&quot;g&quot;>worked with</em>">Marcas con las que <em class="g">trabajé</em></h2></div>
+<div><p class="big">+660K</p><p data-en="views across reels made with travel, tourism and outdoor brands.">vistas en reels hechos con marcas de turismo, viajes y outdoor.</p></div>
+</div>
+<p class="sub" data-en="In the Arctic">En el Ártico</p>
+<div class="strip">
+<a class="rc" href="https://www.instagram.com/instaxtraveler/reel/DEu4g3WPYnv/"><img src="img/c_hvilepust.jpg" alt="" loading="lazy"><h3>Hvilepust</h3><p data-en="Glass igloo · Norway">Iglú de vidrio · Noruega</p></a>
+<a class="rc" href="https://www.instagram.com/instaxtraveler/reel/DEsmuTAStly/"><img src="img/c_brim.jpg" alt="" loading="lazy"><h3>Brim Explorer</h3><p data-en="Whales · Tromsø">Ballenas · Tromsø</p></a>
+<a class="rc" href="https://www.instagram.com/instaxtraveler/reel/DFOBv3AS-El/"><img src="img/c_tromso.jpg" alt="" loading="lazy"><h3>Tromsø Arctic Reindeer</h3><p data-en="Sami culture · Tromsø">Cultura sami · Tromsø</p></a>
+<a class="rc" href="https://www.instagram.com/instaxtraveler/reel/DEVFHqetLCR/"><img src="img/c_hardanger.jpg" alt="" loading="lazy"><h3>Hardanger Fjordtun</h3><p data-en="Tree house · Norway">Casa del árbol · Noruega</p></a>
+</div>
+<p class="sub" data-en="In Argentina">En Argentina</p>
+<div class="rows">
+<a class="crow" href="https://www.instagram.com/instaxtraveler/reel/C59g_eGRsqz/"><img src="img/c_cagliero.jpg" alt="" loading="lazy"><div><h3>Puesto Cagliero</h3><p data-en="Trekking · El Chaltén">Trekking · El Chaltén</p></div><span class="go" data-en="View reel ↗">Ver reel ↗</span></a>
+<a class="crow" href="https://www.instagram.com/instaxtraveler/reel/DC422zUySEb/"><img src="img/c_ibera.jpg" alt="" loading="lazy"><div><h3>Esteros del Iberá</h3><p data-en="Casa Piri &amp; Travesía Iberá · Safari">Casa Piri y Travesía Iberá · Safari</p></div><span class="go" data-en="View reel ↗">Ver reel ↗</span></a>
+<a class="crow" href="https://www.instagram.com/instaxtraveler/reel/DKISghCyDqc/"><img src="img/c_jetsmart.jpg" alt="" loading="lazy"><div><h3>JetSMART</h3><p data-en="Airline · Travel">Aerolínea · Viajes</p></div><span class="go" data-en="View reel ↗">Ver reel ↗</span></a>
+<a class="crow" href="https://www.instagram.com/instaxtraveler/reel/DDaKmPoyS1K/"><img src="img/c_waterdog.jpg" alt="" loading="lazy"><div><h3>Waterdog</h3><p data-en="Outdoor · Iberá">Outdoor · Iberá</p></div><span class="go" data-en="View reel ↗">Ver reel ↗</span></a>
+<a class="crow" href="https://www.instagram.com/instaxtraveler/reel/DWM-RwMNCcK/"><img src="img/c_rewilding.jpg" alt="" loading="lazy"><div><h3>Rewilding Experience</h3><p data-en="Marine wildlife · Patagonia Azul">Fauna marina · Patagonia Azul</p></div><span class="go" data-en="View reel ↗">Ver reel ↗</span></a>
+</div>
+<p class="sub" data-en="More brands">Más marcas</p>
+<div class="cats">
+<div class="cat"><h3 data-en="Stays">Alojamientos</h3><ul><li>El Arribo Hotel</li><li>Chachingo Lodge</li><li>Open Resort Pinamar</li><li>Refugios de Patagonia</li><li>Los Nires Ushuaia</li><li>Sierra Nevada</li><li>Las Guaras</li></ul></div>
+<div class="cat"><h3 data-en="Experiences">Experiencias</h3><ul><li>Rewilding Argentina</li><li>Explore Tierra del Fuego</li><li>Fitz Camp</li><li>Barbagallo Rental</li></ul></div>
+<div class="cat"><h3 data-en="Products">Productos</h3><ul><li>JetSMART</li><li>Waterdog</li><li>DolarApp</li><li>Holafly</li><li>HoverAir</li><li>Salpa Sports</li><li>Kano</li><li>Spalding</li><li>Cerveza Patagonia</li><li>WeKeep</li><li>Che</li></ul></div>
+</div>
+</section>
+
+<section class="card prop" id="antarpply">
+<p class="lbl" data-en="Proposal">Propuesta</p>
+<h2 data-en="Collaborating with <em class=&quot;g&quot;>Antarpply Expeditions</em>">Colaboración con <em class="g">Antarpply Expeditions</em></h2>
+<p class="intro2" data-en="My proposal is to document the expedition from the inside: Antarctica as a traveler lives it, seen through the eyes of a nature photographer. Content that inspires my community to take the trip, and that Antarpply can use on its own channels.">Mi propuesta es documentar la expedición desde adentro: la Antártida tal como la vive un viajero, con la mirada de una fotógrafa de naturaleza. Contenido que inspira a mi comunidad a vivir la experiencia y que Antarpply puede usar en sus propios canales.</p>
+<div class="deliv">
+<div class="dv"><div class="hd"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-dasharray="3 2.2"/><circle cx="12" cy="12" r="4"/></svg></div><h3 data-en="Daily, unlimited stories">Stories diarias e ilimitadas</h3></div><p data-en="An expedition diary throughout the voyage: departure from Ushuaia, the Drake Passage, landings, life on board and the expedition team. Shared live or as soon as there is connectivity, always tagging Antarpply.">Un diario de expedición durante todo el viaje: la partida desde Ushuaia, el cruce del Drake, los desembarcos, la vida a bordo y el equipo de expedición. Publicadas en vivo o apenas haya conectividad, siempre con mención a Antarpply.</p></div>
+<div class="dv"><div class="hd"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="4"/><path d="M8 6l1.5-2h5L16 6"/></svg></div><h3 data-en="Photos and video for Antarpply">Fotos y videos para Antarpply</h3></div><p data-en="30 to 40 edited high-resolution photos and 10 video clips for Antarpply&#39;s social media, website and campaigns, with no time limit. Delivered within 15 days after the expedition.">Entre 30 y 40 fotos editadas en alta resolución y 10 clips de video, para usar en las redes, la web y las campañas de Antarpply, sin límite de tiempo. Entrega dentro de los 15 días posteriores a la expedición.</p></div>
+<div class="dv wide"><div class="hd"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="4"/><path d="M3 9h18M8 4l2 5M14 4l2 5"/><path d="M10 12.5v5l4.5-2.5z"/></svg></div><h3 data-en="3 collab reels">3 reels colaborativos</h3></div><p data-en="Published jointly with @antarpply so each piece reaches both communities. Three proposed angles:">Publicados en conjunto con @antarpply para que cada pieza llegue a ambas comunidades. Tres enfoques propuestos:</p>
+<div class="ideas">
+<div class="idea"><span class="n" data-en="Reel 1 · Cinematic">Reel 1 · Cinematográfico</span><h4 data-en="Bound for Antarctica">Rumbo a la Antártida</h4><p data-en="A cinematic piece about the journey: leaving the End of the World, the open sea, the first iceberg and the first landing. Image and music first.">Una pieza cinematográfica sobre el viaje: la partida desde el Fin del Mundo, el mar abierto, el primer témpano y el primer desembarco. Imagen y música en primer plano.</p></div>
+<div class="idea"><span class="n" data-en="Reel 2 · Experience">Reel 2 · Experiencia</span><h4 data-en="A day on the expedition">Un día a bordo de la expedición</h4><p data-en="The real routine: waking up among the ice, naturalist talks, zodiac outings and evenings on deck. What it&#39;s like to live the expedition.">La rutina real: despertar entre hielos, las charlas de los naturalistas, las salidas en zodiac y las tardes en cubierta. Cómo se vive la expedición.</p></div>
+<div class="idea"><span class="n" data-en="Reel 3 · Wildlife">Reel 3 · Fauna</span><h4 data-en="Antarctic encounters">Encuentros antárticos</h4><p data-en="A video about Antarctic biodiversity: penguins, seals, whales and seabirds, how they live and why it matters to protect them. Filmed following IAATO guidelines.">Un video sobre la biodiversidad antártica: pingüinos, focas, ballenas y aves marinas, cómo viven y por qué es importante cuidarlos. Filmado respetando las normas de IAATO.</p></div>
+</div></div>
+</div>
+<div class="extras">
+<div class="ex"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b data-en="&quot;Antarctica&quot; story highlight">Destacada "Antártida"</b><span data-en="The stories stay pinned on my profile, as permanent visibility for Antarpply.">Las stories quedan fijas en mi perfil, como visibilidad permanente para Antarpply.</span></div></div>
+<div class="ex"><div class="ico"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></div><div><b data-en="Booking link">Link de reservas</b><span data-en="A booking link shared in my stories, so my community can book directly and every inquiry can be tracked.">Un link para reservar compartido en mis stories, para que mi comunidad pueda reservar directo y cada consulta sea medible.</span></div></div>
+<div class="ex"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div><b data-en="Results report">Reporte de resultados</b><span data-en="Reach, views, saves and shares of all the content, sent after the campaign.">Alcance, vistas, guardados y compartidos de todo el contenido, al cierre de la campaña.</span></div></div>
+</div>
+<p class="terms" data-en="Ideas are a starting point and can be adapted to Antarpply&#39;s goals. Dates and terms to be agreed.">Las ideas son un punto de partida y se adaptan a los objetivos de Antarpply. Fechas y condiciones a coordinar.</p>
+</section>
+
+<section class="card contact" id="contacto">
+<div><p class="lbl" data-en="Contact">Contacto</p><h2 data-en="Shall we work <em class=&quot;g&quot;>together</em>?">¿Trabajamos <em class="g">juntos</em>?</h2><p class="s" data-en="Write to me and tell me about your project.">Escribime y contame tu proyecto.</p></div>
+<div class="links">
+<a href="mailto:instaxtraveler@gmail.com"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>instaxtraveler@gmail.com</a>
+<a href="https://wa.me/5491162449930"><svg viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/></svg>+54 9 11 6244-9930</a>
+<a href="https://www.instagram.com/instaxtraveler/"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>@instaxtraveler</a>
+</div>
+</section>
+
+</div>
+</main>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada"><button type="button" aria-label="Cerrar">×</button><img id="lbimg" alt=""></div>
+<script>
+{
+const lb=document.getElementById('lb'),li=document.getElementById('lbimg');
+document.querySelectorAll('.gal figure').forEach(f=>{f.tabIndex=0;const im=f.querySelector('img');const open=()=>{li.src=im.src;li.alt=im.alt;lb.classList.add('on')};f.addEventListener('click',open);f.addEventListener('keydown',e=>{if(e.key==='Enter')open()})});
+const close=()=>lb.classList.remove('on');
+lb.addEventListener('click',close);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+const nl=[...document.querySelectorAll('.nav .navl a')];
+const secs=nl.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){nl.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));const on=nl.find(a=>a.classList.contains('on'));if(on){const L=on.parentElement;const x=on.offsetLeft-L.clientWidth/2+on.offsetWidth/2;L.scrollTo({left:Math.max(0,x)})}}})},{rootMargin:'-40% 0px -55% 0px'});
+secs.forEach(x=>io.observe(x));
+const els=[...document.querySelectorAll('[data-en]')];
+els.forEach(e=>{e.dataset.es=e.innerHTML});
+const be=document.getElementById('b-es'),bn=document.getElementById('b-en');
+const set=l=>{els.forEach(e=>{e.innerHTML=l==='en'?e.dataset.en:e.dataset.es});document.documentElement.lang=l;be.setAttribute('aria-pressed',l==='es');bn.setAttribute('aria-pressed',l==='en');try{localStorage.setItem('ixlang',l)}catch(_){}};
+be.addEventListener('click',()=>set('es'));bn.addEventListener('click',()=>set('en'));
+let saved=null;try{saved=localStorage.getItem('ixlang')}catch(_){}
+if(saved==='en'||location.hash==='#en')set('en');
+}
+</script>
+</body>
+</html>
